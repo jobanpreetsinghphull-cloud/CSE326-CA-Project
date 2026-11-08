@@ -1,0 +1,54 @@
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(51, 65, 85, 0.8);
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(71, 85, 105, 1);
+}
+
+/* SLA Priority Pulse Animations */
+@keyframes pulse-rush {
+    0%, 100% {
+        border-color: rgba(239, 68, 68, 0.8);
+        box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+    }
+    50% {
+        border-color: rgba(239, 68, 68, 0.3);
+        box-shadow: 0 0 2px rgba(239, 68, 68, 0.1);
+    }
+}
+
+.card-critical {
+    animation: pulse-rush 2s infinite ease-in-out;
+}
+
+/* Card Transitions */
+.order-card {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Stat Card Hover Effects */
+.stat-card {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(99, 102, 241, 0.4);
+}
